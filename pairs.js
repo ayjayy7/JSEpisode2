@@ -19,6 +19,31 @@
 ****************************************************************/
 function pairs(names) {
   // Your code goes here
+
+  
+  let random = names.getRandom();  // randomly returns something from the array. e.g. 3
+  
+
+
+  if (names == undefined) {
+    return names;
+  }
+  else if (names.length == 0) {
+    return names;
+  }
+  if (names.length % 2 !== 0) {
+    console.log(names[0]);
+  }
+  
+  Array.prototype.randomElement = function () {
+    return names[Math.floor(Math.random() * names.length)]
+}
+var myRandomElement = names.randomElement()
+
+
+  // if (names.length == 0) {
+  //   return names;
+  // }
 }
 
 module.exports = pairs;
